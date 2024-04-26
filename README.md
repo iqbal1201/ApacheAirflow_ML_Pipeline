@@ -16,4 +16,5 @@ In this project, we’ll create an ML pipeline using Apache Airflow. Our pipelin
 
 **Result**
 
-![Uploading image.png…]()
+![image](https://github.com/iqbal1201/ApacheAirflow_ML_Pipeline/assets/70199329/ca045e7c-4c80-4028-bb6b-602ac2841565)
+
