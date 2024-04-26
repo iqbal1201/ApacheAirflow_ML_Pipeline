@@ -12,3 +12,8 @@ In this project, we’ll create an ML pipeline using Apache Airflow. Our pipelin
 1. Extensive Features: Airflow provides an extensive set of features for workflow management.
 2. Beautiful UI: Its built-in user interface makes monitoring and managing workflows straightforward.
 3. Directed Acyclic Graphs (DAGs): Airflow allows you to programmatically author and schedule workflows using DAGs.
+
+
+**Result**
+
+![Uploading image.png…]()
