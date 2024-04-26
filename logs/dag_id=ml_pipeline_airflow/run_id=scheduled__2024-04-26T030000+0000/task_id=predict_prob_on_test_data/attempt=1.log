@@ -1,0 +1,46 @@
+[2024-04-26T04:26:56.592+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ml_pipeline_airflow.predict_prob_on_test_data scheduled__2024-04-26T03:00:00+00:00 [queued]>
+[2024-04-26T04:26:56.598+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ml_pipeline_airflow.predict_prob_on_test_data scheduled__2024-04-26T03:00:00+00:00 [queued]>
+[2024-04-26T04:26:56.598+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 1
+[2024-04-26T04:26:56.608+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): predict_prob_on_test_data> on 2024-04-26 03:00:00+00:00
+[2024-04-26T04:26:56.669+0000] {standard_task_runner.py:60} INFO - Started process 188 to run task
+[2024-04-26T04:26:56.671+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'ml_pipeline_***', 'predict_prob_on_test_data', 'scheduled__2024-04-26T03:00:00+00:00', '--job-id', '19', '--raw', '--subdir', 'DAGS_FOLDER/ml_pipeline.py', '--cfg-path', '/tmp/tmpuyr6l_wj']
+[2024-04-26T04:26:56.674+0000] {standard_task_runner.py:88} INFO - Job 19: Subtask predict_prob_on_test_data
+[2024-04-26T04:26:56.720+0000] {task_command.py:423} INFO - Running <TaskInstance: ml_pipeline_airflow.predict_prob_on_test_data scheduled__2024-04-26T03:00:00+00:00 [running]> on host 95171c3bcb7a
+[2024-04-26T04:26:56.769+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='ml_pipeline_***' AIRFLOW_CTX_TASK_ID='predict_prob_on_test_data' AIRFLOW_CTX_EXECUTION_DATE='2024-04-26T03:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-04-26T03:00:00+00:00'
+[2024-04-26T04:26:56.771+0000] {logging_mixin.py:188} INFO - ----- Inside predict_on_test_data component ----
+[2024-04-26T04:26:56.774+0000] {logging_mixin.py:188} INFO - 
+---- Predicted Classes (Probability) ---
+[2024-04-26T04:26:56.775+0000] {logging_mixin.py:188} INFO - [[9.85574534e-01 1.44254205e-02 4.57207993e-08]
+ [1.35667187e-03 3.90889448e-01 6.07753880e-01]
+ [1.88158994e-01 8.07638929e-01 4.20207615e-03]
+ [1.57176048e-01 8.38596909e-01 4.22704293e-03]
+ [9.88434571e-01 1.15653934e-02 3.51228239e-08]
+ [4.32005713e-03 6.88513503e-01 3.07166439e-01]
+ [9.95215109e-01 4.78488520e-03 5.35427054e-09]
+ [9.39659470e-01 6.03402275e-02 3.02880728e-07]
+ [1.96394042e-04 1.71277854e-01 8.28525752e-01]
+ [1.33963542e-02 7.35306349e-01 2.51297297e-01]
+ [1.11392679e-06 2.68234284e-02 9.73175458e-01]
+ [1.31279825e-04 1.31863605e-01 8.68005115e-01]
+ [7.04610876e-06 2.34206075e-02 9.76572346e-01]
+ [6.60304436e-03 8.32938747e-01 1.60458208e-01]
+ [9.73484300e-01 2.65156039e-02 9.61011956e-08]
+ [9.76079887e-01 2.39200452e-02 6.76808562e-08]
+ [9.83419578e-01 1.65804069e-02 1.54318261e-08]
+ [3.14082354e-02 9.46711547e-01 2.18802176e-02]
+ [3.87559188e-03 7.57653490e-01 2.38470918e-01]
+ [2.12386887e-03 4.42931183e-01 5.54944948e-01]
+ [9.71155164e-01 2.88447567e-02 7.93037909e-08]
+ [1.07834146e-05 2.64555554e-02 9.73533661e-01]
+ [3.32982305e-03 8.73657152e-01 1.23013025e-01]
+ [1.07981219e-04 2.09364683e-01 7.90527336e-01]
+ [1.48588740e-05 3.59733983e-02 9.64011743e-01]
+ [7.06597470e-04 4.69265113e-01 5.30028290e-01]
+ [5.82935604e-03 8.99330131e-01 9.48405126e-02]
+ [9.45849541e-01 5.41501804e-02 2.78851946e-07]
+ [8.42786254e-05 1.36709047e-01 8.63206674e-01]
+ [9.73649443e-01 2.63504918e-02 6.56344050e-08]]
+[2024-04-26T04:26:56.776+0000] {python.py:201} INFO - Done. Returned value was: None
+[2024-04-26T04:26:56.781+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=ml_pipeline_***, task_id=predict_prob_on_test_data, execution_date=20240426T030000, start_date=20240426T042656, end_date=20240426T042656
+[2024-04-26T04:26:56.808+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-04-26T04:26:56.824+0000] {taskinstance.py:3280} INFO - 1 downstream tasks scheduled from follow-on schedule check

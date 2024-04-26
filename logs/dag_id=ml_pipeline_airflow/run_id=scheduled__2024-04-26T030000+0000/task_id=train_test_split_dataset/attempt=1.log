@@ -1,0 +1,112 @@
+[2024-04-26T04:26:51.212+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ml_pipeline_airflow.train_test_split_dataset scheduled__2024-04-26T03:00:00+00:00 [queued]>
+[2024-04-26T04:26:51.219+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ml_pipeline_airflow.train_test_split_dataset scheduled__2024-04-26T03:00:00+00:00 [queued]>
+[2024-04-26T04:26:51.220+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 1
+[2024-04-26T04:26:51.231+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): train_test_split_dataset> on 2024-04-26 03:00:00+00:00
+[2024-04-26T04:26:51.241+0000] {standard_task_runner.py:60} INFO - Started process 113 to run task
+[2024-04-26T04:26:51.243+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'ml_pipeline_***', 'train_test_split_dataset', 'scheduled__2024-04-26T03:00:00+00:00', '--job-id', '16', '--raw', '--subdir', 'DAGS_FOLDER/ml_pipeline.py', '--cfg-path', '/tmp/tmpzt7j4qi3']
+[2024-04-26T04:26:51.244+0000] {standard_task_runner.py:88} INFO - Job 16: Subtask train_test_split_dataset
+[2024-04-26T04:26:51.284+0000] {task_command.py:423} INFO - Running <TaskInstance: ml_pipeline_airflow.train_test_split_dataset scheduled__2024-04-26T03:00:00+00:00 [running]> on host 95171c3bcb7a
+[2024-04-26T04:26:51.337+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='ml_pipeline_***' AIRFLOW_CTX_TASK_ID='train_test_split_dataset' AIRFLOW_CTX_EXECUTION_DATE='2024-04-26T03:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-04-26T03:00:00+00:00'
+[2024-04-26T04:26:51.339+0000] {logging_mixin.py:188} INFO - --- Inside train_test_split_dataset component ----
+[2024-04-26T04:26:51.359+0000] {logging_mixin.py:188} INFO - 
+--- X_train ---
+[2024-04-26T04:26:51.373+0000] {logging_mixin.py:188} INFO -      sepal-length  sepal-width  petal-length  petal-width
+8             4.4          2.9           1.4          0.2
+106           4.9          2.5           4.5          1.7
+76            6.8          2.8           4.8          1.4
+9             4.9          3.1           1.5          0.1
+89            5.5          2.5           4.0          1.3
+..            ...          ...           ...          ...
+37            4.9          3.1           1.5          0.1
+2             4.7          3.2           1.3          0.2
+33            5.5          4.2           1.4          0.2
+52            6.9          3.1           4.9          1.5
+3             4.6          3.1           1.5          0.2
+
+[120 rows x 4 columns]
+[2024-04-26T04:26:51.374+0000] {logging_mixin.py:188} INFO - 
+ ---- X_test ----
+[2024-04-26T04:26:51.383+0000] {logging_mixin.py:188} INFO -      sepal-length  sepal-width  petal-length  petal-width
+38            4.4          3.0           1.3          0.2
+127           6.1          3.0           4.9          1.8
+57            4.9          2.4           3.3          1.0
+93            5.0          2.3           3.3          1.0
+42            4.4          3.2           1.3          0.2
+56            6.3          3.3           4.7          1.6
+22            4.6          3.6           1.0          0.2
+20            5.4          3.4           1.7          0.2
+147           6.5          3.0           5.2          2.0
+84            5.4          3.0           4.5          1.5
+107           7.3          2.9           6.3          1.8
+141           6.9          3.1           5.1          2.3
+104           6.5          3.0           5.8          2.2
+51            6.4          3.2           4.5          1.5
+7             5.0          3.4           1.5          0.2
+49            5.0          3.3           1.4          0.2
+14            5.8          4.0           1.2          0.2
+69            5.6          2.5           3.9          1.1
+63            6.1          2.9           4.7          1.4
+138           6.0          3.0           4.8          1.8
+10            5.4          3.7           1.5          0.2
+140           6.7          3.1           5.6          2.4
+58            6.6          2.9           4.6          1.3
+134           6.1          2.6           5.6          1.4
+132           6.4          2.8           5.6          2.2
+77            6.7          3.0           5.0          1.7
+75            6.6          3.0           4.4          1.4
+18            5.7          3.8           1.7          0.3
+116           6.5          3.0           5.5          1.8
+28            5.2          3.4           1.4          0.2
+[2024-04-26T04:26:51.384+0000] {logging_mixin.py:188} INFO - 
+ ---- y_train ----
+[2024-04-26T04:26:51.389+0000] {logging_mixin.py:188} INFO -                class
+8        Iris-setosa
+106   Iris-virginica
+76   Iris-versicolor
+9        Iris-setosa
+89   Iris-versicolor
+..               ...
+37       Iris-setosa
+2        Iris-setosa
+33       Iris-setosa
+52   Iris-versicolor
+3        Iris-setosa
+
+[120 rows x 1 columns]
+[2024-04-26T04:26:51.389+0000] {logging_mixin.py:188} INFO - 
+ ---- y_test ----
+[2024-04-26T04:26:51.394+0000] {logging_mixin.py:188} INFO -                class
+38       Iris-setosa
+127   Iris-virginica
+57   Iris-versicolor
+93   Iris-versicolor
+42       Iris-setosa
+56   Iris-versicolor
+22       Iris-setosa
+20       Iris-setosa
+147   Iris-virginica
+84   Iris-versicolor
+107   Iris-virginica
+141   Iris-virginica
+104   Iris-virginica
+51   Iris-versicolor
+7        Iris-setosa
+49       Iris-setosa
+14       Iris-setosa
+69   Iris-versicolor
+63   Iris-versicolor
+138   Iris-virginica
+10       Iris-setosa
+140   Iris-virginica
+58   Iris-versicolor
+134   Iris-virginica
+132   Iris-virginica
+77   Iris-versicolor
+75   Iris-versicolor
+18       Iris-setosa
+116   Iris-virginica
+28       Iris-setosa
+[2024-04-26T04:26:51.396+0000] {python.py:201} INFO - Done. Returned value was: None
+[2024-04-26T04:26:51.403+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=ml_pipeline_***, task_id=train_test_split_dataset, execution_date=20240426T030000, start_date=20240426T042651, end_date=20240426T042651
+[2024-04-26T04:26:51.457+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-04-26T04:26:51.478+0000] {taskinstance.py:3280} INFO - 1 downstream tasks scheduled from follow-on schedule check
